@@ -1,0 +1,654 @@
+/* =========================
+   RESET & VARIABLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #c9283e;
+    --secondary: #f5d7b3;
+    --dark: #2c1810;
+    --light: #fff9f0;
+    --gold: #d4af37;
+    --olive: #8a9a5b;
+}
+
+/* =========================
+   BODY & LAYOUT
+========================= */
+body {
+    font-family: 'Lora', serif;
+    background:
+        linear-gradient(rgba(44,24,16,.85), rgba(44,24,16,.95)),
+        url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1350&q=80') center / cover fixed;
+    color: var(--light);
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.logo-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--light);
+    padding: 6px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.top-bar {
+    background: rgba(44,24,16,0.9);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 2px solid var(--gold);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 0 0 auto;
+}
+
+
+.logo-section .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--light);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding: 20px;
+}
+
+.content-wrapper {
+    width: 100%;
+}
+
+.main-content {
+    width: 100%;
+}
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+}
+
+.language-switcher label {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.language-switcher select {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    font-family: inherit;
+    background: var(--dark);
+    color: var(--light);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.language-switcher select:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* =========================
+   LEFT SIDEBAR BUTTONS
+========================= */
+.left-sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    z-index: 999;
+    background: linear-gradient(180deg, rgba(44,24,16,0.98), rgba(44,24,16,0.95));
+    padding: 10px 0;
+    border-right: 3px solid var(--gold);
+}
+
+.sidebar-btn {
+    background: linear-gradient(135deg, var(--primary), #a01f2e);
+    border: none;
+    border-left: 4px solid transparent;
+    color: var(--light);
+    padding: 10px 8px;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    transition: all 0.25s ease;
+    min-width: 55px;
+}
+
+.sidebar-btn i {
+    font-size: 1.1rem;
+}
+
+.sidebar-btn:hover {
+    background: var(--gold);
+    color: var(--dark);
+    border-left-color: var(--dark);
+    padding-left: 16px;
+}
+
+.sidebar-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-left: 4px solid var(--dark);
+    box-shadow: 2px 0 8px rgba(212,175,55,0.5);
+}
+
+/* =========================
+   SIDEBAR PANELS
+========================= */
+.sidebar-panels {
+    position: fixed;
+    left: 55px;
+    top: 100px;
+    width: 280px;
+    background: rgba(44,24,16,0.98);
+    border: 2px solid var(--gold);
+    border-radius: 0 14px 14px 0;
+    padding: 20px;
+    z-index: 998;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-20px);
+}
+
+.left-sidebar:hover ~ .sidebar-panels,
+.sidebar-panels:hover {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.sidebar-panels.show {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateX(0) !important;
+}
+
+.sidebar-panel {
+    display: none;
+    animation: fadeSlide .25s ease;
+}
+
+.sidebar-panel.active {
+    display: block;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar-panel h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.panel-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--secondary);
+}
+
+.panel-content strong {
+    color: var(--gold);
+}
+
+/* =========================
+   SIDEBAR BOOKING FORM
+========================= */
+.sidebar-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-booking-form input,
+.sidebar-booking-form button {
+    padding: 8px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.sidebar-booking-form input {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid var(--secondary);
+    color: var(--light);
+}
+
+.sidebar-booking-form input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.sidebar-booking-form button {
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.25s ease;
+}
+
+.sidebar-booking-form button:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container {
+    display: none;
+}
+
+.tagline {
+    font-style: italic;
+    color: var(--secondary);
+    margin-top: 10px;
+}
+
+/* =========================
+   NAV TABS
+========================= */
+.nav-tabs {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--light);
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* =========================
+   MENU SECTIONS
+========================= */
+.menu-section {
+    display: none;
+    margin-top: 30px;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+.menu-category {
+    background: rgba(255,255,255,0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.category-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.3rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Group title for subsections like "Le nostre specialità" */
+.group-title {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: var(--gold);
+    background: rgba(212,175,55,0.08);
+    padding: 8px 18px;
+    border-radius: 12px;
+    margin: 6px auto 18px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 768px) {
+    .group-title {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}
+
+.menu-item {
+    background: rgba(255,255,255,0.12);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+}
+
+.item-price {
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.item-description {
+    color: var(--secondary);
+    margin-top: 10px;
+}
+
+/* =========================
+   COPERTO BADGE (bottom-left)
+========================= */
+/* FIX COPERTO BADGE – small, bottom-left, elegant */
+/* HARD FIX – force coperto badge to stay small */
+.coperto-badge {
+    position: fixed !important;
+    bottom: 12px !important;
+    left: 12px !important;
+    top: auto !important;
+    right: auto !important;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content !important;
+    max-width: none !important;
+    height: auto !important;
+
+    padding: 6px 12px !important;
+    font-size: 0.7rem !important;
+    font-weight: 600;
+
+    border-radius: 999px !important;
+    background: rgba(212,175,55,0.95);
+    color: var(--dark);
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    z-index: 1200;
+    white-space: nowrap;
+}
+
+
+
+@media (max-width: 520px) {
+    .coperto-badge {
+        bottom: 8px;
+        left: 8px;
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    margin-top: 80px;
+    padding: 40px 20px 20px;
+    text-align: center;
+    border-top: 2px solid var(--olive);
+    width: 100%;
+}
+
+.contact-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.signature-divider {
+    width: 80px;
+    height: 2px;
+    background: var(--olive);
+    margin: 20px auto;
+}
+
+.signature {
+    font-style: italic;
+}
+
+/* =========================
+   RTL SUPPORT (ARABIC)
+========================= */
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] .language-switcher {
+    text-align: left;
+}
+
+html[dir="rtl"] .logo-container {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .item-header {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .contact-info {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .sidebar-panels {
+    left: auto;
+    right: 20px;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+@media (max-width: 768px) {
+    .left-sidebar {
+        position: static !important;
+        flex-direction: row;
+        justify-content: center;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        background: none !important;
+        border: none !important;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .sidebar-btn {
+        border-radius: 10px;
+        border: 2px solid var(--gold) !important;
+        padding: 12px !important;
+    }
+
+    .sidebar-panels {
+        position: static !important;
+        width: 100% !important;
+        max-height: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        margin-bottom: 20px;
+        transform: none !important;
+        border: 2px solid var(--gold);
+        border-radius: 14px;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .sidebar-panel {
+        display: block;
+    }
+
+    .logo-section .logo {
+        font-size: 1.3rem;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .menu-category {
+        padding: 20px;
+    }
+
+    .item-name {
+        font-size: 1.3rem;
+    }
+}
+.sidebar-panels {
+    position: fixed;
+    left: 55px;
+    top: 100px;
+    width: 280px;
+    background: rgba(44,24,16,0.98);
+
+    /* ✅ ADD */
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+
+    border: 2px solid var(--gold);
+    border-radius: 0 14px 14px 0;
+    padding: 20px;
+    z-index: 998;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-20px);
+}
+.coperto-badge {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    background: rgba(212,175,55,0.98);
+    color: var(--dark);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    z-index: 1200;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    border: 1px solid rgba(0,0,0,0.08);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    font-family: 'Lora', serif;
+}
+
+/* =========================
+   QR CODE STYLING
+========================= */
+#qrCodeContainer {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#qrCodeContainer canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-download-qr {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), #a01f2e);
+    color: var(--light);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn-download-qr:hover {
+    background: linear-gradient(135deg, var(--gold), #c9a038);
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(212,175,55,0.4);
+}
+
+.btn-download-qr:active {
+    transform: translateY(0);
+}
