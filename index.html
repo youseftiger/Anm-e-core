@@ -30,6 +30,9 @@
                 <option value="fr">🇫🇷 Français</option>
                 <option value="de">🇩🇪 Deutsch</option>
                 <option value="zh">🇨🇳 中文</option>
+                <option value="pl">🇵🇱 Polski</option>
+                <option value="ru">🇷🇺 Русский</option>
+
             </select>
         </div>
     </div>
@@ -99,15 +102,6 @@
                 <div id="sidebarBookingMessage" class="booking-message"></div>
             </div>
         </div>
-
-        <div class="sidebar-panel" id="panel-qrcode">
-            <h3 data-i18n="sidebar_qrcode">QR Code</h3>
-            <div class="panel-content">
-                <p data-i18n="qrcode_description">Scan this QR code to visit our menu and make a booking:</p>
-                <div id="qrCodeContainer" style="display: flex; justify-content: center; margin: 20px 0;"></div>
-                <button id="downloadQRBtn" class="btn-download-qr" data-i18n="btn_download_qr">Download QR Code</button>
-                <p style="font-size: 0.85rem; margin-top: 15px; text-align: center;" data-i18n="qrcode_share">Share this QR code with your customers!</p>
-            </div>
         </div>
     </div>
 
@@ -218,7 +212,7 @@
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="deliziosa">Deliziosa</h3>
+                    <h3 class="item-name" data-i18n="deliziosa pianca con datterino giallo">Deliziosa</h3>
                     <span class="item-price">€12,00</span>
                 </div>
                     <p class="item-description" data-i18n="deliziosa_desc">Fior di latte, prosciutto cotto, formaggio francese, chips di zucchine fritte</p>
@@ -282,6 +276,13 @@
                     <span class="item-price">€13,00</span>
                 </div>
                 <p class="item-description" data-i18n="la_toscana_desc">Bianca, fior di latte, crema di finocchio, finocchiona di salame, tarallo sbriciolato di grano arso</p>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3 class="item-name" data-i18n="Impasto Alternativo">Impasto Alternativo</h3>
+                    <span class="item-price">€2</span>
+                </div>
+                <p class="item-description" data-i18n="Ai 10 Cereali - Al carbone Vegetale / no lottosio">Ai 10 Cereali - Al carbone Vegetale</p>
             </div>
         </div>
     </section>
@@ -388,31 +389,17 @@
             <h2 class="category-title" data-i18n="pasta_dishes">Pasta Dishes</h2>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="orecchiette">Orecchiette alle Cime di Rapa</h3>
-                    <span class="item-price">€16</span>
-                </div>
-                <p class="item-description" data-i18n="orec_desc">Traditional pasta with turnip greens, garlic and chili</p>
-            </div>
-            <div class="menu-item">
-                <div class="item-header">
-                    <h3 class="item-name" data-i18n="trenette">Trenette al Pesto</h3>
+                    <h3 class="item-name" data-i18n="Orecchiette al ragù con braciola">Orecchiette al Ragù con Braciola</h3>
                     <span class="item-price">€15</span>
                 </div>
-                <p class="item-description" data-i18n="trenette_desc">Homemade pasta with fresh basil pesto and potatoes</p>
+                <p class="item-description" data-i18n="orec_braciola_desc">Traditional pasta with beef ragù</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="orecchiette_ragu">Orecchiette al Ragù con Braciola</h3>
-                    <span class="item-price">€15</span>
-                </div>
-                <p class="item-description" data-i18n="orecchiette_ragu_desc">Pasta tradizionale con ragù e braciola</p>
-            </div>
-            <div class="menu-item">
-                <div class="item-header">
-                    <h3 class="item-name" data-i18n="orecchiette_rape">Orecchiette con Cime di Rape</h3>
+                    <h3 class="item-name" data-i18n="Orecchiette alle cime di rapa, acciughe e pomodorino pendolo">Orecchiette al Sugo di Tomino</h3>
                     <span class="item-price">€12</span>
                 </div>
-                <p class="item-description" data-i18n="orecchiette_rape_desc">Con acciughe e pomodorino pendolo</p>
+                <p class="item-description" data-i18n="orec_desc">Traditional pasta with turnip greens, garlic and chili</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
@@ -423,10 +410,10 @@
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="spaghetti_aglio_olio">Spaghetti Aglio Olio e Peperoncino</h3>
+                    <h3 class="item-name" data-i18n="spaghetti_aglio_olio_e_peperoncino_con_peperone_crusco">Spaghetti Aglio Olio e Peperoncino con peperone crusco</h3>
                     <span class="item-price">€9</span>
                 </div>
-                <p class="item-description" data-i18n="spaghetti_aglio_olio_desc">Con peperone crusco</p>
+                <p class="item-description" data-i18n="spaghetti_aglio_olio_desc">Con peperone crusco peperone crusco</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
@@ -458,10 +445,10 @@
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="tortiera_barese">Tortiera alla Barese</h3>
+                    <h3 class="item-name" data-i18n="Tortiera alla barese">Tortiera alla Barese</h3>
                     <span class="item-price">€10</span>
                 </div>
-                <p class="item-description" data-i18n="tortiera_barese_desc">Riso, patate e cozze</p>
+                <p class="item-description" data-i18n="Riso, patate e cozze">Riso, patate e cozze</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
@@ -520,10 +507,10 @@
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="frittura_mista">Gran Frittura Mista</h3>
+                    <h3 class="item-name" data-i18n="Gran frittura mista di calamari, gamberetti, e "paranza" s.d.">Gran Frittura Mista</h3>
                     <span class="item-price">€18</span>
                 </div>
-                <p class="item-description" data-i18n="frittura_mista_desc">Calamari, gamberetti e paranza</p>
+                <p class="item-description" data-i18n="Calamari, gamberetti e paranza">Calamari, gamberetti e paranza</p>
             </div>
         </div>
     </section>
@@ -533,70 +520,70 @@
             <h2 class="category-title" data-i18n="starters">Starters</h2>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="verdure_grigliate">Selezione di Verdure Grigliate</h3>
+                    <h3 class="item-name" data-i18n="selezione_di_verdure_grigliate_con_stecco_di_caciocavallo_in_tempura_e_pomodori_secchi">Selezione di Verdure Grigliate</h3>
                     <span class="item-price">€12</span>
                 </div>
                 <p class="item-description" data-i18n="verdure_grigliate_desc">Con stecco di caciocavallo in tempura e pomodori secchi</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="bomba_fior">Bomba di Fior di Latte</h3>
+                    <h3 class="item-name" data-i18n="bomba_fior_di_latte_300gr_con_prosciutto_crudo_san_daniele_e_scaglie_di_parmigiano_2_persone">Bomba di Fior di Latte 2 persone</h3>
                     <span class="item-price">€20</span>
                 </div>
                 <p class="item-description" data-i18n="bomba_fior_desc">300g con crudo San Daniele e scaglie di parmigiano - 2 persone</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="salumi_barese">Selezione di Salumi Tipici</h3>
+                    <h3 class="item-name" data-i18n="Selezione di salumi tipici alla barese con confetture, crostino e pane croccante ( 2 persone)">Selezione di Salumi Tipici</h3>
                     <span class="item-price">€18</span>
                 </div>
                 <p class="item-description" data-i18n="salumi_barese_desc">Alla barese con confetture, crostino e pane croccante - 2 persone</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="insalata_mare">Insalata di Mare Tiepida</h3>
+                    <h3 class="item-name" data-i18n="Insalata di mare tiepida con citronette al pomodoro">Insalata di Mare Tiepida</h3>
                     <span class="item-price">€12</span>
                 </div>
                 <p class="item-description" data-i18n="insalata_mare_desc">Con citronette al pomodoro</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="carpaccio_salmone">Carpaccio di Salmone Affumicato</h3>
+                    <h3 class="item-name" data-i18n="Carpaccio di salmone affumicato con glassa di pomodorini e basilico">Carpaccio di Salmone Affumicato</h3>
                     <span class="item-price">€12</span>
                 </div>
                 <p class="item-description" data-i18n="carpaccio_salmone_desc">Con glassa di pomodorini e basilico</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="melanzane_parm">Melanzane alla Parmigiana</h3>
-                    <span class="item-price">€9</span>
+                    <h3 class="item-name" data-i18n="Melanzane alla parmigiana">Melanzane alla Parmigiana</h3>
+                    <span class="item-price">€10</span>
                 </div>
                 <p class="item-description" data-i18n="melanzane_parm_desc">Classica ricetta barese</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="cozze_ripiene">Cozze Ripiene alla Barese</h3>
+                    <h3 class="item-name" data-i18n="Cozze ripiene alla barese">Cozze Ripiene alla Barese</h3>
                     <span class="item-price">€10</span>
                 </div>
                 <p class="item-description" data-i18n="cozze_ripiene_desc">Ripiene con pangrattato e prezzemolo</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="polpette_nonna">Polpette della Nonna</h3>
+                    <h3 class="item-name" data-i18n="polpette dell nonna">Polpette della Nonna</h3>
                     <span class="item-price">€10</span>
                 </div>
                 <p class="item-description" data-i18n="polpette_nonna_desc">Ricetta tradizionale barese</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="bruschetta_mix">Mix di Bruschetta</h3>
+                    <h3 class="item-name" data-i18n="Mix di bruschetta">Mix di Bruschetta</h3>
                     <span class="item-price">€10</span>
                 </div>
                 <p class="item-description" data-i18n="bruschetta_mix_desc">Assortite con vari condimenti</p>
             </div>
             <div class="menu-item">
                 <div class="item-header">
-                    <h3 class="item-name" data-i18n="crudo_mare">Crudo Mare</h3>
+                    <h3 class="item-name" data-i18n="crudo di mare s.d.">Crudo Mare</h3>
                     <span class="item-price">€25</span>
                 </div>
                 <p class="item-description" data-i18n="crudo_mare_desc">Selezione fresca di pesce crudo</p>
@@ -903,99 +890,308 @@
 
 <script>
 const translations = {
-    en: {
-        language: "Language",
-        restaurant: "Anm e Coor",
-        tagline: "Authentic Bari Cuisine Since 1998",
-        sidebar_info: "Info",
-        sidebar_contact: "Contact",
-        sidebar_booking: "Book Table",
-        sidebar_qrcode: "QR Code",
-        qrcode_description: "Scan this QR code to visit our menu and make a booking:",
-        qrcode_share: "Share this QR code with your customers!",
-        btn_download_qr: "Download QR Code",
-        info_about: "Welcome to Anm e Coor, where authentic Bari cuisine comes to life. Our dishes are prepared with passion and the finest ingredients.",
-        info_year: "Serving since 1998",
-        contact_phone: "Phone:",
-        contact_address: "Address:",
-        contact_hours: "Hours:",
-        btn_book: "Book Now",
-        pizza: "Pizza",
-        pasta: "Pasta",
-        antipasti: "Antipasti",
-        desserts: "Desserts",
-        drinks: "Drinks",
-        specialties: "Bari Specialties",
-        pasta_dishes: "Pasta Dishes",
-        starters: "Starters",
-        sweet_treats: "Sweet Treats",
-        beverages: "Beverages",
-        margherita: "Pizza Margherita",
-        margherita_desc: "Classic pizza with tomato, mozzarella, and basil",
-        nostra_margherita: "La nostra Margherita",
-        nostra_margherita_desc: "Parmigiano Reggiano DOP, fior di latte, San Marzano, extra virgin olive oil, basil",
-        calabrese: "Calabrese",
-        calabrese_desc: "Fior di latte, San Marzano, spicy salume, extra virgin olive oil",
-        crudaiola: "Crudaiola",
-        crudaiola_desc: "White base, arugula, cherry tomato, fior di latte, ricotta marzotica, extra virgin olive oil",
-        capricciosa: "Capricciosa",
-        capricciosa_desc: "Mushrooms, artichokes, fior di latte, cooked ham, San Marzano, extra virgin olive oil",
-        quattro_formaggi: "4 Formaggi",
-        quattro_formaggi_desc: "White base with fior di latte, gorgonzola, smoked scamorza, emmental",
-        americana: "Americana",
-        americana_desc: "Wurstel, San Marzano, fior di latte, fries",
-        marinara: "Marinara",
-        marinara_desc: "Double San Marzano, garlic oil, black olives, oregano, parsley, basil",
-        romana: "Romana",
-        romana_desc: "Anchovies, capers, fior di latte, San Marzano, extra virgin olive oil",
-        bufalina: "Bufalina",
-        bufalina_desc: "Campanian buffalo mozzarella, cherry tomato, San Marzano, extra virgin olive oil, basil, parmigiano",
-        fume: "Fumè",
-        fume_desc: "White base, smoked scamorza, fior di latte, speck",
-        la_rapata: "La Rapata",
-        la_rapata_desc: "White base, fior di latte, turnip greens, dried cherry tomato, fresh sausage",
-        deliziosa: "Deliziosa",
-        deliziosa_desc: "Fior di latte, cooked ham, French cheese, fried zucchini chips",
-        focaccia: "Focaccia Barese",
-        focaccia_desc: "Soft focaccia with tomatoes, olives, and oregano",
-        
-        our_specialties: "Our Specialties",
-        anim_e_core: "Anim e Core",
-        anim_e_core_desc: "Ragù di braciola, shredded braciola, fior di latte, pecorino, pepper",
-        pistacchiosa: "Pistacchiosa",
-        pistacchiosa_desc: "White base, fior di latte, mortadella, pistachio crumbs, burrata, extra virgin olive oil",
-        campagnola: "Campagnola",
-        campagnola_desc: "White base, fior di latte, eggplant, zucchini, cardoncello mushrooms, extra virgin olive oil, breadcrumbs",
-        martina: "Martina",
-        martina_desc: "San Marzano, fior di latte, extra virgin olive oil, capocollo di Martina Franca, burrata, dried tomato",
-        pinna_gialla: "Pinna Gialla",
-        pinna_gialla_desc: "Fior di latte, yellow datterini tomatoes, fresh red tuna, zucchini chips, burrata",
-        valtellina: "Valtellina",
-        valtellina_desc: "White base, fior di latte, extra virgin olive oil, beef carpaccio, parmesan shavings",
-        altamurana: "Altamurana",
-        altamurana_desc: "San Marzano, fior di latte, cardoncello, smoked scamorza, cooked ham, parmesan, extra virgin olive oil",
-        la_toscana: "La Toscana",
-        la_toscana_desc: "White base, fior fennel cream, finocchiona salami, crumbled tarallo made from burnt wheat",
-        orecchiette: "Orecchiette alle Cime di Rapa",
-        orec_desc: "Traditional pasta with turnip greens, garlic and chili",
-        trenette: "Trenette al Pesto",
-        trenette_desc: "Homemade pasta with fresh basil pesto and potatoes",
-        burrata: "Burrata con Pomodorini",
-        burrata_desc: "Creamy burrata with cherry tomatoes and olive oil",
-        polpo: "Polpo alla Griglia",
-        polpo_desc: "Grilled octopus with lemon and parsley",
-        tiramisu: "Tiramisù Classico",
-        tiramisu_desc: "Espresso-soaked ladyfingers with mascarpone cream",
-        cannoli: "Cannoli Siciliani",
-        cannoli_desc: "Crispy shells filled with sweet ricotta and chocolate chips",
-        limoncello: "Limoncello Artigianale",
-        limoncello_desc: "House-made lemon liqueur from Amalfi lemons",
-        nero: "Negroni",
-        nero_desc: "Classic Italian aperitif with gin, vermouth, and Campari",
-        address: "Via cairoli 49, Bari 70122, Italy",
-        hours: "Open daily 12:00–23:00",
-        footer: "Buon Appetito 🍝"
-    },
+   en: {
+  language: "Language",
+  restaurant: "Anm e Coor",
+  tagline: "Authentic Bari cuisine since 1998",
+
+  sidebar_info: "Info",
+  sidebar_contact: "Contact",
+  sidebar_booking: "Book a Table",
+  sidebar_qrcode: "QR Code",
+
+  qrcode_description: "Scan this QR code to view our menu and make a reservation:",
+  qrcode_share: "Share this QR code with your customers!",
+  btn_download_qr: "Download QR Code",
+
+  info_about: "Welcome to Anm e Coor, where authentic Bari cuisine comes to life. Our dishes are prepared with passion and the finest ingredients.",
+  info_year: "Since 1998",
+
+  contact_phone: "Phone:",
+  contact_address: "Address:",
+  contact_hours: "Opening Hours:",
+  btn_book: "Book Now",
+
+  pizza: "Pizza",
+  pasta: "Pasta",
+  antipasti: "Starters",
+  desserts: "Desserts",
+  drinks: "Drinks",
+  specialties: "Bari Specialties",
+
+  pasta_dishes: "First Courses",
+  starters: "Starters",
+  sweet_treats: "Desserts",
+  beverages: "Beverages",
+
+  margherita: "Margherita Pizza",
+  margherita_desc: "Classic pizza with tomato, mozzarella, and basil",
+
+  nostra_margherita: "Our Margherita",
+  nostra_margherita_desc: "Parmigiano Reggiano DOP, fior di latte mozzarella, San Marzano tomatoes, extra virgin olive oil, basil",
+
+  calabrese: "Calabrese",
+  calabrese_desc: "Fior di latte mozzarella, San Marzano tomatoes, spicy salami, extra virgin olive oil",
+
+  crudaiola: "Crudaiola",
+  crudaiola_desc: "White base, arugula, cherry tomatoes, fior di latte mozzarella, marzotica ricotta, extra virgin olive oil",
+
+  capricciosa: "Capricciosa",
+  capricciosa_desc: "Mushrooms, artichokes, fior di latte mozzarella, cooked ham, San Marzano tomatoes, extra virgin olive oil",
+
+  quattro_formaggi: "Four Cheese Pizza",
+  quattro_formaggi_desc: "White base with fior di latte mozzarella, gorgonzola, smoked scamorza, emmental",
+
+  americana: "Americana",
+  americana_desc: "Frankfurters, San Marzano tomatoes, fior di latte mozzarella, French fries",
+
+  marinara: "Marinara",
+  marinara_desc: "Double San Marzano tomatoes, garlic oil, black olives, oregano, parsley, basil",
+
+  romana: "Romana",
+  romana_desc: "Anchovies, capers, fior di latte mozzarella, San Marzano tomatoes, extra virgin olive oil",
+
+  bufalina: "Bufala Pizza",
+  bufalina_desc: "Buffalo mozzarella, cherry tomatoes, San Marzano tomatoes, extra virgin olive oil, basil, parmesan",
+
+  fume: "Fumé",
+  fume_desc: "White base, smoked scamorza, fior di latte mozzarella, speck ham",
+
+  la_rapata: "La Rapata",
+  la_rapata_desc: "White base, fior di latte mozzarella, turnip greens, sun-dried tomatoes, fresh sausage",
+
+  deliziosa: "Deliziosa",
+  deliziosa_desc: "Fior di latte mozzarella, cooked ham, French cheese, fried zucchini chips",
+
+  our_specialties: "Our Specialties",
+
+  anim_e_core: "Anim e Core",
+  anim_e_core_desc: "Beef braciola ragù, shredded braciola, fior di latte mozzarella, pecorino cheese, black pepper",
+
+  pistacchiosa: "Pistachio Pizza",
+  pistacchiosa_desc: "White base, fior di latte mozzarella, mortadella, crushed pistachios, burrata, extra virgin olive oil",
+
+  campagnola: "Campagnola",
+  campagnola_desc: "White base, fior di latte mozzarella, eggplant, zucchini, cardoncelli mushrooms, extra virgin olive oil, breadcrumbs",
+
+  martina: "Martina",
+  martina_desc: "San Marzano tomatoes, fior di latte mozzarella, extra virgin olive oil, Martina Franca capocollo, burrata, sun-dried tomatoes",
+
+  pinna_gialla: "Yellowfin",
+  pinna_gialla_desc: "Fior di latte mozzarella, yellow datterino tomatoes, fresh red tuna, zucchini chips, burrata",
+
+  valtellina: "Valtellina",
+  valtellina_desc: "White base, fior di latte mozzarella, extra virgin olive oil, beef carpaccio, parmesan flakes",
+
+  altamurana: "Altamurana",
+  altamurana_desc: "San Marzano tomatoes, fior di latte mozzarella, cardoncelli mushrooms, smoked scamorza, cooked ham, parmesan, extra virgin olive oil",
+
+  la_toscana: "La Toscana",
+  la_toscana_desc: "White base, fior di latte mozzarella, fennel cream, fennel salami, crumbled burnt-wheat tarallo",
+
+  focaccia: "Bari-Style Focaccia",
+  focaccia_desc: "Soft focaccia with tomatoes, olives, and oregano",
+
+  orecchiette: "Orecchiette with Turnip Greens",
+  orec_desc: "Traditional pasta with turnip greens, garlic, and chili pepper",
+
+  trenette: "Trenette with Pesto",
+  trenette_desc: "Homemade pasta with fresh pesto, potatoes, and green beans",
+
+  burrata: "Burrata with Cherry Tomatoes",
+  burrata_desc: "Creamy burrata with cherry tomatoes and olive oil",
+
+  polpo: "Grilled Octopus",
+  polpo_desc: "Grilled octopus with lemon and parsley",
+
+  tiramisu: "Classic Tiramisu",
+  tiramisu_desc: "Coffee-soaked ladyfingers with mascarpone cream",
+
+  cannoli: "Sicilian Cannoli",
+  cannoli_desc: "Crispy shells filled with sweet ricotta and chocolate chips",
+
+  limoncello: "Artisan Limoncello",
+  limoncello_desc: "Handcrafted liqueur made with Amalfi Coast lemons",
+
+  nero: "Negroni",
+  nero_desc: "Classic Italian aperitif with gin, red vermouth, and Campari",
+
+  address: "Via Cairoli 49, Bari 70122, Italy",
+  hours: "Open daily from 12:00 PM to 11:00 PM",
+  footer: "Buon Appetito 🍝",
+  main_courses: "Main Courses",
+ orecchiette_ragu: "Orecchiette with Ragù and Braciola",
+ orecchiette_ragu_desc: "Traditional pasta with slow-cooked ragù and braciola",
+
+ orecchiette_rape: "Orecchiette with Turnip Greens",
+ orecchiette_rape_desc: "With anchovies and cherry tomatoes",
+
+ linguine_scampi: "Linguine with Scampi Ragù",
+ linguine_scampi_desc: "Fresh pasta with scampi and tomato sauce",
+
+ spaghetti_aglio_olio: "Spaghetti Aglio, Olio & Chili",
+ spaghetti_aglio_olio_desc: "With crispy dried pepper",
+ spaghetto_cozze: "Spaghetti with Mussels",
+ spaghetto_cozze_desc: "Pasta with fresh mussels",
+
+ tonnarelli_carbonara: "Tonnarelli Carbonara",
+ tonnarelli_carbonara_desc: "Classic Roman recipe",
+
+ tonnarelli_cacio_pepe: "Tonnarelli Cacio e Pepe",
+ tonnarelli_cacio_pepe_desc: "Pasta with pecorino cheese and black pepper",
+
+ fave_cicorie: "Fava Beans and Chicory",
+ fave_cicorie_desc: "Traditional dish from Bari",
+
+ tortiera_barese: "Bari-Style Baked Dish",
+ tortiera_barese_desc: "Rice, potatoes and mussels",
+
+ spaghetto_assassina: "Assassin’s Spaghetti",
+ spaghetto_assassina_desc: "Pan-fried crispy spaghetti",
+
+ spaghetto_assassina_rape: "Assassin’s Spaghetti with Turnip Greens",
+ spaghetto_assassina_rape_desc: "With turnip greens",
+
+ braciola_barese: "Bari-Style Braciola",
+ braciola_barese_desc: "2 pieces – traditional recipe",
+
+ tagliata: "Sliced Beef Steak",
+ tagliata_desc: "With rocket, Grana cheese and cherry tomatoes",
+ 
+
+ straccetti_manzo: "Beef Strips",
+ straccetti_manzo_desc: "With artichokes, cherry tomatoes and balsamic vinegar",
+
+ pesce_spada: "Swordfish Steak",
+ pesce_spada_desc: "Grilled with rocket, cherry tomatoes and Taggiasca olives",
+
+ grigliata_gamberoni: "Grilled Prawns and Cuttlefish",
+ grigliata_gamberoni_desc: "Grilled seafood selection",
+ 
+
+    frittura_mista: "Mixed Fried Seafood",
+ frittura_mista_desc: "Fried squid, shrimp and assorted fish",
+
+ liquori: "Liqueurs",
+
+ spritz: "Spritz",
+ spritz_desc: "Classic Italian aperitif with prosecco and bitter",
+
+ acqua_naturale: "Still Water",
+ acqua_naturale_desc: "Natural mineral water",
+
+ acqua_frizzante: "Sparkling Water",
+ acqua_frizzante_desc: "Sparkling mineral water",
+
+ soft_drinks: "Coca-Cola / Fanta / Sprite",
+ soft_drinks_desc: "Bottled soft drinks",
+
+ te: "Iced Tea (Lemon / Peach)",
+ te_desc: "Cold tea: lemon or peach",
+
+ bottled_beers: "Bottled Beers",
+
+ tennents: "Tennent’s Super 33 cl",
+ tennents_desc: "Imported bottled beer",
+ 
+ moretti_rossa: "Moretti Rossa 33 cl",
+ moretti_rossa_desc: "Moretti Rossa bottled beer",
+ 
+nastro_azzurro: "Nastro Azzurro 33 cl",
+ nastro_azzurro_desc: "Nastro Azzurro bottled beer",
+
+ menabrea: "Menabrea 33 cl",
+ menabrea_desc: "Menabrea bottled beer",
+
+ heineken_gf: "Heineken Gluten Free",
+ heineken_gf_desc: "Gluten-free Heineken beer",
+
+ heineken_zero: "Heineken Zero",
+ heineken_zero_desc: "Non-alcoholic Heineken beer",
+
+ draft_beers: "Draft Beers",
+
+ heineken_20: "Heineken 20 cl",
+ heineken_20_desc: "Small draft beer",
+
+ heineken_40: "Heineken 40 cl",
+ heineken_40_desc: "Large draft beer",
+    liquors: "Liqueurs",
+    
+    vodka: "Vodka",
+    vodka_desc: "Selection of premium vodka",
+    
+    gin: "Gin",
+    gin_desc: "Selection of premium gin",
+    
+    rum: "Rum",
+    rum_desc: "Selection of premium rum",
+    
+    tequila: "Tequila",
+    tequila_desc: "Selection of premium tequila",
+    whisky: "Whisky",
+ whisky_desc: "Selection of whisky",
+
+ rum_don_papa: "Don Papa Rum",
+ rum_don_papa_desc: "Premium Don Papa rum",
+ rum_diplomatico: "Diplomático Rum",
+ rum_diplomatico_desc: "Aged Diplomático rum",
+
+ amaro_del_capo: "Amaro del Capo",
+ amaro_del_capo_desc: "Traditional Italian herbal liqueur",
+
+ jefferson: "Jefferson",
+ jefferson_desc: "Jefferson herbal spirit",
+
+ jagermeister: "Jägermeister",
+ jagermeister_desc: "Chilled herbal liqueur",
+
+ montenegro: "Montenegro",
+ montenegro_desc: "Amaro Montenegro",
+ 
+ house_specialties_liquors: "House Specialties",
+
+ mandarino: "Mandarin Liqueur",
+ mandarino_desc: "House-made mandarin liqueur",
+
+ cherry_liq: "Cherry Liqueur",
+ cherry_liq_desc: "House-made cherry liqueur",
+
+ alloro: "Bay Leaf Liqueur",
+ alloro_desc: "House-made bay leaf liqueur",
+
+ nocino: "Nocino",
+ nocino_desc: "Traditional walnut liqueur",
+
+ side_dishes: "Side Dishes",
+
+ patate_fritte: "French Fries",
+ patate_fritte_desc: "Crispy fried potatoes with rosemary",
+
+ patate_al_forno: "Roasted Potatoes",
+ patate_al_forno_desc: "Oven-roasted potatoes with rosemary and garlic",
+
+ insalata_mista_desc: "Mixed salad with olive oil and balsamic vinegar",
+ verdure_grigliate_desc: "Grilled vegetables with olive oil and herbs",
+ crudite_desc: "Fresh raw vegetables with olive oil and herbs",
+
+ Cheesecake_ai_Frutti_di_Bosco: "Berry Cheesecake",
+ Cheesecake_ai_Frutti_di_Bosco_desc: "Creamy cheesecake with mixed berries",
+
+ Soufflé_al_Cioccolato_Caldo: "Warm Chocolate Soufflé",
+ Soufflé_al_Cioccolato_Caldo_desc: "Warm chocolate soufflé with vanilla ice cream",
+
+ Sorbetto_al_Limone: "Lemon Sorbet",
+ Sorbetto_al_Limone_desc: "Refreshing lemon sorbet with a hint of mint",
+ Baba_al_rum: "Rum Baba",
+ Baba_al_rum_desc: "Traditional rum-soaked baba with custard or whipped cream",
+ Cannuolo_siciliano_composto: "Sicilian Cannolo",
+ Cannuolo_siciliano_composto_desc: "Traditional Sicilian pastry filled with ricotta and candied fruit",
+ caffe: "Coffee",
+ caffe_desc: "Freshly brewed coffee"
+
+
+},
     it: {
         language: "Lingua",
         restaurant: "Anm e Coor",
@@ -1195,6 +1391,7 @@ const translations = {
         Cannuolo_siciliano_composto_desc: "Traditional Sicilian pastry filled with ricotta and candied fruit",
         caffe: "Coffee",
         caffe_desc: "Freshly brewed coffee"
+
     },
     ar: {
         language: "اللغة",
@@ -1376,186 +1573,80 @@ const translations = {
         nocino: "نوتشينو",
         nocino_desc: "ليكير تقليدي من الجوز"
     },
-    es: {
-        language: "Idioma",
-        restaurant: "Anm e Coor",
-        tagline: "Cocina auténtica de Bari desde 1998",
-        sidebar_info: "Información",
-        sidebar_contact: "Contacto",
-        sidebar_booking: "Reservar Mesa",
-        sidebar_qrcode: "Código QR",
-        qrcode_description: "Escanea este código QR para visitar nuestro menú y reservar:",
-        qrcode_share: "¡Comparte este código QR con tus clientes!",
-        btn_download_qr: "Descargar Código QR",
-        info_about: "Bienvenidos a Anm e Coor, donde la auténtica cocina de Bari cobra vida. Nuestros platos se preparan con pasión y los mejores ingredientes.",
-        info_year: "Sirviendo desde 1998",
-        contact_phone: "Teléfono:",
-        contact_address: "Dirección:",
-        contact_hours: "Horario:",
-        btn_book: "Reservar Ahora",
-        pizza: "Pizza",
-        pasta: "Pasta",
-        antipasti: "Entrantes",
-        desserts: "Postres",
-        drinks: "Bebidas",
-        specialties: "Especialidades de Bari",
-        pasta_dishes: "Platos de Pasta",
-        starters: "Entrantes",
-        sweet_treats: "Postres",
-        beverages: "Bebidas",
-        margherita: "Pizza Margherita",
-        margherita_desc: "Pizza clásica con tomate, mozzarella y albahaca",
-        nostra_margherita: "Nuestra Margherita",
-        nostra_margherita_desc: "Parmigiano Reggiano DOP, fior di latte, San Marzano, aceite de oliva virgen extra, albahaca",
-        calabrese: "Calabrese",
-        calabrese_desc: "Fior di latte, San Marzano, salame picante, aceite de oliva virgen extra",
-        crudaiola: "Crudaiola",
-        crudaiola_desc: "Base blanca, rúcula, cherry, fior di latte, ricotta marzotica, aceite de oliva",
-        capricciosa: "Capricciosa",
-        capricciosa_desc: "Setas, alcachofas, fior di latte, jamón cocido, San Marzano, aceite de oliva",
-        quattro_formaggi: "4 Quesos",
-        quattro_formaggi_desc: "Base blanca con fior di latte, gorgonzola, scamorza ahumada, emmental",
-        americana: "Americana",
-        americana_desc: "Wurstel, San Marzano, fior di latte, patatas fritas",
-        marinara: "Marinara",
-        marinara_desc: "Doble San Marzano, aceite de ajo, aceitunas negras, orégano, perejil, albahaca",
-        romana: "Romana",
-        romana_desc: "Anchoas, alcaparras, fior di latte, San Marzano, aceite de oliva virgen extra",
-        bufalina: "Bufalina",
-        bufalina_desc: "Mozzarella di bufala campana, cherry, San Marzano, aceite de oliva, albahaca, parmigiano",
-        fume: "Fumè",
-        fume_desc: "Base blanca, scamorza ahumada, fior di latte, speck",
-        la_rapata: "La Rapata",
-        la_rapata_desc: "Base blanca, fior di latte, grelos, tomate seco, salchicha fresca",
-        deliziosa: "Deliziosa",
-        deliziosa_desc: "Fior di latte, jamón cocido, queso francés, chips de calabacín fritas",
-        
-        our_specialties: "Nuestras Especialidades",
-        anim_e_core: "Anim e Core",
-        anim_e_core_desc: "Ragù di braciola, braciola deshilachada, fior di latte, pecorino, pimienta",
-        pistacchiosa: "Pistacchiosa",
-        pistacchiosa_desc: "Base blanca, fior di latte, mortadela, granillo de pistacho, burrata, aceite de oliva virgen extra",
-        campagnola: "Campagnola",
-        campagnola_desc: "Base blanca, fior di latte, berenjena, calabacín, cardoncello, aceite de oliva, pan rallado",
-        martina: "Martina",
-        martina_desc: "San Marzano, fior di latte, aceite de oliva, capocollo de Martina Franca, burrata, tomate seco",
-        pinna_gialla: "Pinna Gialla",
-        pinna_gialla_desc: "Fior di latte, datterini amarillos, atún rojo fresco, chips de calabacín, burrata",
-        valtellina: "Valtellina",
-        valtellina_desc: "Base blanca, fior di latte, aceite de oliva, carpaccio de ternera, lascas de parmesano",
-        altamurana: "Altamurana",
-        altamurana_desc: "San Marzano, fior di latte, cardoncello, scamorza ahumada, jamón cocido, parmesano, aceite de oliva",
-        la_toscana: "La Toscana",
-        la_toscana_desc: "Base blanca, crema de hinojo, finocchiona, tarallo desmenuzado de grano quemado",
-        focaccia: "Focaccia Barese",
-        focaccia_desc: "Focaccia suave con tomates, aceitunas y orégano",
-        orecchiette: "Orecchiette con grelos",
-        orec_desc: "Pasta tradicional con verduras, ajo y chile",
-        trenette: "Trenette al Pesto",
-        trenette_desc: "Pasta casera con pesto fresco, patatas y judías verdes",
-        burrata: "Burrata con Tomatitos",
-        burrata_desc: "Burrata cremosa con tomates cherry y aceite de oliva",
-        polpo: "Pulpo a la Parrilla",
-        polpo_desc: "Pulpo asado con limón y perejil",
-        tiramisu: "Tiramisú Clásico",
-        tiramisu_desc: "Bizcochos empapados en café con crema de mascarpone",
-        cannoli: "Cannoli Sicilianos",
-        cannoli_desc: "Conos crujientes rellenos de ricota dulce y virutas de chocolate",
-        limoncello: "Limoncello Artesanal",
-        limoncello_desc: "Licor de limón casero de los limones de la Costa Amalfitana",
-        nero: "Negroni",
-        nero_desc: "Aperitivo italiano clásico con ginebra, vermut y Campari",
-        address: "Via cairoli 49, Bari 70122, Italia",
-        hours: "Abierto todos los días 12:00–23:00",
-        footer: "¡Buen Provecho! 🍝",
-        main_courses: "Segundos Platos",
-        orecchiette_ragu: "Orecchiette al Ragù con Braciola",
-        orecchiette_ragu_desc: "Pasta tradicional con ragù y braciola",
-        orecchiette_rape: "Orecchiette con Grelos",
-        orecchiette_rape_desc: "Con anchoas y tomates cherry",
-        linguine_scampi: "Linguine al Ragù de Langostinos",
-        linguine_scampi_desc: "Pasta fresca con langostinos y tomate",
-        spaghetti_aglio_olio: "Spaghetti Aglio Olio e Peperoncino",
-        spaghetti_aglio_olio_desc: "Con pimiento de piquillo",
-        spaghetto_cozze: "Spaghetto con Mejillones",
-        spaghetto_cozze_desc: "Pasta con mejillones frescos",
-        tonnarelli_carbonara: "Tonnarelli alla Carbonara",
-        tonnarelli_carbonara_desc: "Receta clásica romana",
-        tonnarelli_cacio_pepe: "Tonnarelli Cacio e Pepe",
-        tonnarelli_cacio_pepe_desc: "Pasta con queso pecorino y pimienta negra",
-        fave_cicorie: "Habas y Achicoria",
-        fave_cicorie_desc: "Plato típico de Bari",
-        tortiera_barese: "Tortiera alla Barese",
-        tortiera_barese_desc: "Arroz, patatas y mejillones",
-        spaghetto_assassina: "Spaghetto all'Assassina",
-        spaghetto_assassina_desc: "Pasta crujiente salteada en sartén",
-        spaghetto_assassina_rape: "Spaghetto all'Assassina con Grelos",
-        spaghetto_assassina_rape_desc: "Con grelos",
-        braciola_barese: "Braciola Barese",
-        braciola_barese_desc: "2 piezas - Receta tradicional",
-        tagliata: "Tagliata di Manzo",
-        tagliata_desc: "Con rúcula, queso parmesano y tomates cherry",
-        straccetti_manzo: "Straccetti di Manzo",
-        straccetti_manzo_desc: "Tiras de carne con alcachofas, tomates cherry y reducción balsámica",
-        pesce_spada: "Filete de Pez Espada",
-        pesce_spada_desc: "A la parrilla con rúcula, tomates cherry y aceitunas taggiasche",
-        grigliata_gamberoni: "Gambas y Sepia a la Parrilla",
-        grigliata_gamberoni_desc: "Mariscos variados a la parrilla",
-        frittura_mista: "Fritura Mixta",
-        frittura_mista_desc: "Calamares, gambas y pescado variado frito",
-        liquori: "Licores",
-        spritz: "Spritz",
-        spritz_desc: "Aperitivo italiano clásico con prosecco y bitter",
-        acqua_naturale: "Agua Natural",
-        acqua_naturale_desc: "Agua mineral natural",
-        acqua_frizzante: "Agua con Gas",
-        acqua_frizzante_desc: "Agua mineral con gas",
-        soft_drinks: "Coca Cola / Fanta / Sprite",
-        soft_drinks_desc: "Bebidas refrescantes en botella",
-        te: "Té (de limón / melocotón)",
-        te_desc: "Té frío: limón o melocotón",
-        bottled_beers: "Cervezas en Botella",
-        tennents: "Tennent's Super 33 cl",
-        tennents_desc: "Cerveza importada en botella",
-        moretti_rossa: "Moretti Rossa 33 cl",
-        moretti_rossa_desc: "Cerveza Moretti Rossa en botella",
-        nastro_azzurro: "Nastro Azzurro 33 cl",
-        nastro_azzurro_desc: "Cerveza Nastro Azzurro en botella",
-        menabrea: "Menabrea 33 cl",
-        menabrea_desc: "Cerveza Menabrea en botella",
-        heineken_gf: "Heineken Sin Gluten",
-        heineken_gf_desc: "Heineken sin gluten",
-        heineken_zero: "Heineken Cero",
-        heineken_zero_desc: "Heineken sin alcohol",
-        draft_beers: "Cervezas de Barril",
-        heineken_20: "Heineken 20 cl",
-        heineken_20_desc: "Pequeña porción de barril",
-        heineken_40: "Heineken 40 cl",
-        heineken_40_desc: "Porción grande de barril",
-        whisky: "Whisky",
-        whisky_desc: "Whisky seleccionado",
-        rum_don_papa: "Rum Don Papa",
-        rum_don_papa_desc: "Rum premium Don Papa",
-        rum_diplomatico: "Rum Diplomático",
-        rum_diplomatico_desc: "Rum envejecido Diplomático",
-        amaro_del_capo: "Amaro Del Capo",
-        amaro_del_capo_desc: "Amaro italiano tradicional",
-        jefferson: "Jefferson",
-        jefferson_desc: "Espíritu Jefferson",
-        jagermeister: "Jägermeister",
-        jagermeister_desc: "Licor de hierbas servido frío",
-        montenegro: "Montenegro",
-        montenegro_desc: "Amaro Montenegro",
-        house_specialties_liquors: "Nuestras Especialidades de la Casa",
-        mandarino: "Mandarino",
-        mandarino_desc: "Licor casero de mandarina",
-        cherry_liq: "Cereza",
-        cherry_liq_desc: "Licor casero de cereza",
-        alloro: "Alloro",
-        alloro_desc: "Licor casero de hoja de laurel",
-        nocino: "Nocino",
-        nocino_desc: "Licor tradicional de nuez"
-    }
+    en: {
+  margherita: "Margherita Pizza",
+  margherita_desc: "Classic pizza with tomato sauce, mozzarella, and fresh basil",
+
+  nostra_margherita: "Our Margherita",
+  nostra_margherita_desc: "Parmigiano Reggiano DOP, fresh mozzarella, San Marzano tomato sauce, extra virgin olive oil, basil",
+
+  calabrese: "Calabrese",
+  calabrese_desc: "Fresh mozzarella, San Marzano tomato sauce, spicy salami, extra virgin olive oil",
+
+  crudaiola: "Crudaiola",
+  crudaiola_desc: "White base, arugula, cherry tomatoes, fresh mozzarella, aged ricotta cheese, extra virgin olive oil",
+
+  capricciosa: "Capricciosa",
+  capricciosa_desc: "Mushrooms, artichokes, fresh mozzarella, cooked ham, San Marzano tomato sauce, extra virgin olive oil",
+
+  quattro_formaggi: "Four Cheese Pizza",
+  quattro_formaggi_desc: "White base with fresh mozzarella, gorgonzola, smoked scamorza, and emmental cheese",
+
+  americana: "Americana",
+  americana_desc: "Frankfurters, San Marzano tomato sauce, fresh mozzarella, French fries",
+
+  marinara: "Marinara",
+  marinara_desc: "Double San Marzano tomato sauce, garlic-infused olive oil, black olives, oregano, parsley, basil",
+
+  romana: "Romana",
+  romana_desc: "Anchovies, capers, fresh mozzarella, San Marzano tomato sauce, extra virgin olive oil",
+
+  bufalina: "Buffalo Mozzarella Pizza",
+  bufalina_desc: "Buffalo mozzarella, cherry tomatoes, San Marzano tomato sauce, extra virgin olive oil, basil, parmesan cheese",
+
+  fume: "Fumé",
+  fume_desc: "White base, smoked scamorza, fresh mozzarella, speck cured ham",
+
+  la_rapata: "La Rapata",
+  la_rapata_desc: "White base, fresh mozzarella, turnip greens, sun-dried tomatoes, fresh sausage",
+
+  deliziosa: "Deliziosa",
+  deliziosa_desc: "Fresh mozzarella, cooked ham, French cheese, crispy fried zucchini",
+
+  anim_e_core: "Anim e Core",
+  anim_e_core_desc: "Traditional beef braciola ragù, shredded braciola, fresh mozzarella, pecorino cheese, black pepper",
+
+  pistacchiosa: "Pistachio Pizza",
+  pistacchiosa_desc: "White base, fresh mozzarella, mortadella, crushed pistachios, burrata cheese, extra virgin olive oil",
+
+  campagnola: "Campagnola",
+  campagnola_desc: "White base, fresh mozzarella, eggplant, zucchini, cardoncelli mushrooms, extra virgin olive oil, breadcrumbs",
+
+  martina: "Martina",
+  martina_desc: "San Marzano tomato sauce, fresh mozzarella, extra virgin olive oil, Martina Franca capocollo, burrata, sun-dried tomatoes",
+
+  pinna_gialla: "Yellowfin Tuna Pizza",
+  pinna_gialla_desc: "Fresh mozzarella, yellow datterino tomatoes, fresh red tuna, crispy zucchini, burrata",
+
+  valtellina: "Valtellina",
+  valtellina_desc: "White base, fresh mozzarella, extra virgin olive oil, beef carpaccio, parmesan flakes",
+
+  altamurana: "Altamurana",
+  altamurana_desc: "San Marzano tomato sauce, fresh mozzarella, cardoncelli mushrooms, smoked scamorza, cooked ham, parmesan cheese, extra virgin olive oil",
+
+  la_toscana: "La Toscana",
+  la_toscana_desc: "White base, fresh mozzarella, fennel cream, fennel salami, crumbled burnt-wheat tarallo",
+
+  orecchiette: "Orecchiette with Turnip Greens",
+  orec_desc: "Traditional Apulian pasta with turnip greens, garlic, chili pepper, and anchovies",
+
+  fave_cicorie: "Fava Bean Purée with Chicory",
+  fave_cicorie_desc: "Traditional Bari dish made with fava beans and wild chicory",
+
+  spaghetto_assassina: "Assassin’s Spaghetti",
+  spaghetto_assassina_desc: "Crispy pan-fried spaghetti cooked directly in spicy tomato sauce"
+}
+
     ,
     de: {
         language: "Sprache",
@@ -2116,7 +2207,146 @@ const translations = {
         caffe: "咖啡",
         caffe_desc: "新泡咖啡"
     }
-     
+    ,
+     pl: {
+  language: "Język",
+  restaurant: "Anm e Coor",
+  tagline: "Autentyczna kuchnia z Bari od 1998 roku",
+
+  sidebar_info: "Informacje",
+  sidebar_contact: "Kontakt",
+  sidebar_booking: "Rezerwacja stolika",
+  sidebar_qrcode: "Kod QR",
+
+  qrcode_description: "Zeskanuj ten kod QR, aby zobaczyć menu i dokonać rezerwacji:",
+  qrcode_share: "Udostępnij ten kod QR swoim klientom!",
+  btn_download_qr: "Pobierz kod QR",
+
+  info_about: "Witamy w Anm e Coor, gdzie ożywa autentyczna kuchnia z Bari. Nasze dania przygotowywane są z pasją i najlepszych składników.",
+  info_year: "Od 1998 roku",
+
+  contact_phone: "Telefon:",
+  contact_address: "Adres:",
+  contact_hours: "Godziny otwarcia:",
+  btn_book: "Zarezerwuj teraz",
+
+  pizza: "Pizza",
+  pasta: "Pasta",
+  antipasti: "Przystawki",
+  desserts: "Desery",
+  drinks: "Napoje",
+  specialties: "Specjały z Bari",
+
+  pasta_dishes: "Pierwsze dania",
+  starters: "Przystawki",
+  sweet_treats: "Desery",
+  beverages: "Napoje",
+
+  margherita: "Pizza Margherita",
+  margherita_desc: "Klasyczna pizza z sosem pomidorowym, mozzarellą i bazylią",
+
+  nostra_margherita: "Nasza Margherita",
+  nostra_margherita_desc: "Parmigiano Reggiano DOP, świeża mozzarella, pomidory San Marzano, oliwa extra virgin, bazylia",
+
+  calabrese: "Calabrese",
+  calabrese_desc: "Świeża mozzarella, pomidory San Marzano, pikantne salami, oliwa extra virgin",
+
+  crudaiola: "Crudaiola",
+  crudaiola_desc: "Biała baza, rukola, pomidorki koktajlowe, mozzarella, dojrzewająca ricotta, oliwa extra virgin",
+
+  capricciosa: "Capricciosa",
+  capricciosa_desc: "Pieczarki, karczochy, mozzarella, szynka gotowana, pomidory San Marzano, oliwa extra virgin",
+
+  quattro_formaggi: "Pizza Cztery Sery",
+  quattro_formaggi_desc: "Biała baza z mozzarellą, gorgonzolą, wędzoną scamorzą i emmentalem",
+
+  americana: "Americana",
+  americana_desc: "Parówki, pomidory San Marzano, mozzarella, frytki",
+
+  marinara: "Marinara",
+  marinara_desc: "Podwójny sos z pomidorów San Marzano, oliwa czosnkowa, czarne oliwki, oregano, pietruszka, bazylia",
+
+  romana: "Romana",
+  romana_desc: "Anchois, kapary, mozzarella, pomidory San Marzano, oliwa extra virgin",
+
+  bufalina: "Pizza z mozzarellą bufala",
+  bufalina_desc: "Mozzarella di bufala, pomidorki, pomidory San Marzano, oliwa extra virgin, bazylia, parmezan",
+
+  fume: "Fumé",
+  fume_desc: "Biała baza, wędzona scamorza, mozzarella, szynka speck",
+
+  footer: "Smacznego 🍝"
+},
+ ru: {
+  language: "Язык",
+  restaurant: "Anm e Coor",
+  tagline: "Аутентичная кухня Бари с 1998 года",
+
+  sidebar_info: "Информация",
+  sidebar_contact: "Контакты",
+  sidebar_booking: "Бронирование столика",
+  sidebar_qrcode: "QR-код",
+
+  qrcode_description: "Отсканируйте этот QR-код, чтобы посмотреть меню и забронировать столик:",
+  qrcode_share: "Поделитесь этим QR-кодом с вашими гостями!",
+  btn_download_qr: "Скачать QR-код",
+
+  info_about: "Добро пожаловать в Anm e Coor — место, где оживает настоящая кухня Бари. Наши блюда готовятся с любовью и из лучших ингредиентов.",
+  info_year: "С 1998 года",
+
+  contact_phone: "Телефон:",
+  contact_address: "Адрес:",
+  contact_hours: "Часы работы:",
+  btn_book: "Забронировать",
+
+  pizza: "Пицца",
+  pasta: "Паста",
+  antipasti: "Закуски",
+  desserts: "Десерты",
+  drinks: "Напитки",
+  specialties: "Специалитеты Бари",
+
+  pasta_dishes: "Первые блюда",
+  starters: "Закуски",
+  sweet_treats: "Десерты",
+  beverages: "Напитки",
+
+  margherita: "Пицца Маргарита",
+  margherita_desc: "Классическая пицца с томатным соусом, моцареллой и базиликом",
+
+  nostra_margherita: "Наша Маргарита",
+  nostra_margherita_desc: "Пармиджано Реджано DOP, свежая моцарелла, томаты Сан-Марцано, оливковое масло extra virgin, базилик",
+
+  calabrese: "Calabrese",
+  calabrese_desc: "Свежая моцарелла, томаты Сан-Марцано, острая салями, оливковое масло extra virgin",
+
+  crudaiola: "Crudaiola",
+  crudaiola_desc: "Белая основа, руккола, томаты черри, моцарелла, выдержанная рикотта, оливковое масло extra virgin",
+
+  capricciosa: "Capricciosa",
+  capricciosa_desc: "Грибы, артишоки, моцарелла, варёная ветчина, томаты Сан-Марцано, оливковое масло extra virgin",
+
+  quattro_formaggi: "Пицца Четыре сыра",
+  quattro_formaggi_desc: "Белая основа с моцареллой, горгонзолой, копчёной скаморцей и сыром эмменталь",
+
+  americana: "Americana",
+  americana_desc: "Сосиски, томаты Сан-Марцано, моцарелла, картофель фри",
+
+  marinara: "Marinara",
+  marinara_desc: "Двойной томатный соус Сан-Марцано, чесночное масло, чёрные оливки, орегано, петрушка, базилик",
+
+  romana: "Romana",
+  romana_desc: "Анчоусы, каперсы, моцарелла, томаты Сан-Марцано, оливковое масло extra virgin",
+
+  bufalina: "Пицца с буйволиной моцареллой",
+  bufalina_desc: "Моцарелла из буйволиного молока, томаты черри, томаты Сан-Марцано, оливковое масло extra virgin, базилик, пармезан",
+
+  fume: "Fumé",
+  fume_desc: "Белая основа, копчёная скаморца, моцарелла, ветчина спек",
+
+  footer: "Приятного аппетита 🍝"
+}
+
 };
 
 // Set initial language
@@ -2293,7 +2523,7 @@ if (bookingForm) {
     });
 }
 
-// QR CODE GENERATION
+/*// QR CODE GENERATION
 function initQRCode() {
     const qrContainer = document.getElementById('qrCodeContainer');
     const downloadBtn = document.getElementById('downloadQRBtn');
@@ -2325,7 +2555,8 @@ function initQRCode() {
         }
     });
 }
-
+    */ /*Closing the qr code*/
+/*
 // Initialize QR code when sidebar opens
 document.querySelectorAll('.sidebar-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -2334,11 +2565,12 @@ document.querySelectorAll('.sidebar-btn').forEach(btn => {
         }
     });
 });
-
+/*
 // Initialize QR code on page load
 window.addEventListener('load', () => {
     setTimeout(initQRCode, 500);
 });
+*/
 </script>
 
 </body>
